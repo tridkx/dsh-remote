@@ -1,0 +1,16 @@
+[Unit]
+Description=DSH remote agent
+After=network.target
+
+[Service]
+Type=simple
+User=dshagent
+Group=dshagent
+WorkingDirectory=/opt/dsh-agent
+ExecStart=/usr/bin/node /opt/dsh-agent/agent.mjs
+Restart=always
+RestartSec=3
+EnvironmentFile=/opt/dsh-agent/agent.env
+
+[Install]
+WantedBy=multi-user.target

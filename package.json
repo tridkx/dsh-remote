@@ -1,0 +1,21 @@
+{
+  "name": "dsh-remote",
+  "version": "1.2.0",
+  "description": "Remote control tools for a dsh remote agent (HTTP): remote_bash persistent shell, remote_exec, remote_upload, remote_download, remote_health, plus a settings UI for the connection.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots"
+      ]
+    }
+  },
+  "license": "MIT"
+}
